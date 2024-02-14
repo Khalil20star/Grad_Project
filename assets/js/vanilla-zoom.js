@@ -89,4 +89,64 @@
     else {
         console.log("Library already defined.");
     }
-})(window);
+
+
+})
+function toggleMedicationTextbox() {
+    var selectElement = document.getElementById("medication_select");
+    var textboxElement = document.getElementById("medication_textbox");
+    textboxElement.style.display = selectElement.value === "yes" ? "block" : "none";
+}
+function toggleMedication() {
+    var selectElement = document.getElementById("medication_select_allergies");
+    var textboxElement = document.getElementById("medication_text_allergies");
+    textboxElement.style.display = selectElement.value === "yes" ? "block" : "none";
+}
+function validateForm() {
+    // Get the values of the form fields
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const city = document.getElementById('city').value;
+    const country = document.getElementById('country').value;
+    const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+
+    // Check the name
+    if (!name || !/^[a-zA-Z\s-]+$/.test(name)) {
+        alert('Please enter a valid name.');
+        return false;
+    }
+
+    // Check the phone number
+    if (!phone || !/^\d+(?:\s|\()?\d+(?:\s|\))?\d+$/.test(phone)) {
+        alert('Please enter a valid phone number.');
+        return false;
+    }
+
+    // Check the location
+    if (!city || !country) {
+        alert('Please enter a valid location.');
+        return false;
+    }
+
+    // Check the password
+    if (!password || password.length < 8 ||
+        !/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':\"\\|,<.>/?]).*$/.test(password)) {
+        alert('Please enter a strong password.');
+        return false;
+    }
+
+    // Check the email
+    if (!email || !/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+
+    // If all the checks pass, submit the form
+    return true;
+}
+
+// Add an event listener to the form's submit event
+document.getElementById('myForm').addEventListener('submit', validateForm);
+
+(window);

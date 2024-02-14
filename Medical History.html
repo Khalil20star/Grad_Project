@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/Logo/New.png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body clean-navbar navbar-light">
+        <div class="container"><a class="navbar-brand logo" href="index.html"><img src="assets/img/Logo/New.png" alt=""> HealthMate AI</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="registration.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page registration-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Registration</h2>
+                </div>
+                <form>
+                    <div class="mb-3"><label class="form-label" for="Gender">Gender</label> <select class="form-select"
+                            id="gender" name="gender" data-bs-theme="light">
+                            <option hidden value="" selected disabled></option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select></div>
+                    <div class="mb-3"><label class="form-label" for="Age">Age</label><input class="form-control"
+                            type="number" id="Age" name="Age" data-bs-theme="light"></div>
+                    <div class="mb-3"><label class="form-label" for="conditions">Check the conditions that apply to
+                            you:</label>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" id="Asthma" name="conditions[]"
+                                value="Asthma">
+                            <label class="form-check-label ml-1" for="Asthma">Asthma</label>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" id="Cardiac disease" name="conditions[]"
+                                value="Cardiac disease">
+                            <label class="form-check-label ml-1" for="Cardiac disease">Cardiac disease</label>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" id="Hypertension" name="conditions[]"
+                                value="Hypertension">
+                            <label class="form-check-label ml-1" for="Hypertension">Hypertension</label>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" id="Cancer" name="conditions[]"
+                                value="Cancer">
+                            <label class="form-check-label ml-1" for="Cancer">Cancer</label>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-check-input" type="checkbox" id="Diabetes" name="conditions[]"
+                                value="Diabetes">
+                            <label class="form-check-label ml-1" for="Diabetes">Diabetes</label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="medication_select">Are you currently taking any
+                                medication?</label>
+                            <select class="form-select" id="medication_select" name="medication_select"
+                                onchange="toggleMedicationTextbox()" data-bs-theme="light">
+                                <option hidden value="" selected disabled></option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 medication" id="medication_textbox">
+                            <label class="form-label" for="medication_text">Please Specify The Medication:</label>
+                            <input type="text" class="form-control" id="medication_text" name="medication_text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="medication_select_allergies">Do you have any medication allergies?</label>
+                            <select class="form-select" id="medication_select_allergies" name="medication_select_allergies"
+                                onchange="toggleMedication()" data-bs-theme="light">
+                                <option hidden value="" selected disabled></option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 medication" id="medication_text_allergies">
+                            <label class="form-label" for="medication_allergies">Please Specify The Medication:</label>
+                            <input type="text" class="form-control" id="medication_allergies" name="medication_allergies">
+                        </div>
+                        <div class="mb-3"><label class="form-label" for="smoking_status">Do you use any kind of tobacco?</label> <select class="form-select"
+                            id="smoking_status" name="smoking_status" data-bs-theme="light">
+                            <option hidden value="" selected disabled></option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select></div>
+                        <button class="btn btn-primary" type="submit">REGISTER</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer class="page-footer dark p-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="#">Company Information</a></li>
+                        <li><a href="contact-us.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

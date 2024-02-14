@@ -235,3 +235,25 @@
 .clean-hero img{
   background-size: cover;
 }
+.ml-1 {
+  margin-left: 5px !important;
+  padding-top: 1px !important;
+}
+.medication{
+  display: none;
+}
+.login{
+  height: 63vh !important;
+  padding-top: 20px;
+}
+.is-invalid {
+  border: 1px solid #dc3545;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+}
+.join{
+  text-decoration: none; 
+  color:#756dfc;
+}
+.btn1:hover .join{
+  color: #fff;
+}

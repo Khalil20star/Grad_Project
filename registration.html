@@ -4,75 +4,66 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Features</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/Logo/New.png">
+    <title>Register</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/Logo/New.png">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-body clean-navbar navbar-light">
-        <div class="container"><a class="navbar-brand logo" href="index.html"><img src="assets/img/Logo/New.png" alt="">
-                HealthMate AI</a><button data-bs-toggle="collapse" class="navbar-toggler"
-                data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span
-                    class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand logo" href="index.html"><img src="assets/img/Logo/New.png" alt=""> HealthMate AI</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="registration.html">Register</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <main class="page">
-        <section class="clean-block features">
+    <main class="page registration-page">
+        <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Features</h2>
-                    <p>Website Features Aimed At Enhancing User Experience And Optimizing Healthcare Delivery. Here Are
-                        Some Key Features</p>
+                    <h2 class="text-info">Registration</h2>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 feature-box"><i class="icon-star icon"></i>
-                        <h4>Symptom-Based Doctor Recommendations</h4>
-                        <p>Users can input their symptoms through the website interface. The system then analyzes these
-                            symptoms using advanced algorithms to recommend relevant doctors</p>
+                <form id="myForm">
+                    <div class="mb-3"><label class="form-label" for="name">Name</label><input class="form-control item"
+                            type="text" id="name" data-bs-theme="light"></div>
+                    <div class="mb-3"><label class="form-label" for="Phone">Telephone</label><input
+                            class="form-control item" type="tel" id="Phone" data-bs-theme="light"></div>
+                    <div class="mb-3"><label class="form-label" for="Location">Location</label>
+                        <div class="mb-3 d-flex gap-3">
+                            <input class="form-control item" type="text" id="Location" data-bs-theme="light"
+                                placeholder="City">
+                            <input class="form-control item" type="text" id="Location" data-bs-theme="light"
+                                placeholder="Country">
+                        </div>
                     </div>
-                    <div class="col-md-5 feature-box"><i class="icon-microphone icon"></i>
-                        <h4>Voice Recording Capability</h4>
-                        <p>Users have the option to record their symptoms using voice input directly from the website
-                        </p>
-                    </div>
-                    <div class="col-md-5 feature-box"><i class="icon-people icon"></i>
-                        <h4>Personalized Doctor Matching</h4>
-                        <p>Leveraging the user's reported symptoms and other relevant information, the system matches
-                            the user with the most suitable healthcare professionals or doctors from its database</p>
-                    </div>
-                    <div class="col-md-5 feature-box"><i class="icon-user-following icon"></i>
-                        <h4>User-Friendly Interface</h4>
-                        <p>The website provides an intuitive and user-friendly interface that guides users through the
-                            process of inputting their symptoms, recording voice messages, and receiving doctor
-                            recommendations</p>
-                    </div>
-                </div>
+                    <div class="mb-3"><label class="form-label" for="password">Password</label><input
+                            class="form-control item" type="password" id="password" data-bs-theme="light"></div>
+                    <div class="mb-3"><label class="form-label" for="email">Email</label><input
+                            class="form-control item" type="email" id="email" data-bs-theme="light"></div><button
+                        class="btn btn-primary" id="btn_next" type="button">NEXT</button>
+                </form>
             </div>
         </section>
+
     </main>
-    <footer class="page-footer dark p-2 fixed-bottom">
+    <footer class="page-footer dark p-2">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                     <h5>Get started</h5>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="#">Sign up</a></li>
                         <li><a href="#">Downloads</a></li>
                     </ul>
@@ -81,7 +72,7 @@
                     <h5>About us</h5>
                     <ul>
                         <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="contact-us.html">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -107,6 +98,7 @@
     <script src="assets/js/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/registration.js"></script>
 </body>
 
 </html>
